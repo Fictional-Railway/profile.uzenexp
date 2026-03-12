@@ -146,7 +146,7 @@
                 <span class="section-title">管理人(Nagi_san096)の自己紹介</span><br>
                 どうもこんにちは。架空鉄道にはまってから約3年、一番本格的に制作しているのがこの羽前急行です。一応他のサイト運営もしていますがかなり世界線が違うので紹介しません。よかったら探してみてね。
             </div>
-            
+
             <div class="section-box">
                 <span class="section-title">制作ツール</span><br>
                 <b>サイト作成：</b>Visual Studio Code<br>
@@ -203,26 +203,6 @@
         </footer>
     </main>
 
-    <script>
-        // チャイム再生ロジック（シンプル版）
-        function playChime() {
-            const audio = document.getElementById('chime-audio');
-            const status = document.getElementById('chime-status');
-            if (audio.paused) {
-                audio.play();
-                status.innerText = "♪ 放送中...（音量にご注意ください）";
-                status.style.color = "red";
-            } else {
-                audio.pause();
-                audio.currentTime = 0;
-                status.innerText = "※クリックすると車内チャイムが流れます（音量注意）";
-                status.style.color = "black";
-            }
-            audio.onended = () => {
-                status.innerText = "※クリックすると車内チャイムが流れます（音量注意）";
-                status.style.color = "black";
-            };
-        }
-    </script>
+    
 </body>
 </html>
