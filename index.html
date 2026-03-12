@@ -100,14 +100,59 @@
         <header>
             <center style="font-size: 2.2rem; font-weight: bold;">管理人ページ</center>
         </header>
-
         <div class="marquee-container">
-            <marquee scrollamount="5">＝管理人からのお願い＝ 二次創作作品を随時募集中です！詳細は下記をご覧ください。</marquee>
+            <marquee id="weather-marquee" scrollamount="4">【沿線気象情報】気象データを取得中...</marquee>
         </div>
 
+        <script>
+        async function getUzenWeather() {
+            const marquee = document.getElementById('weather-marquee');
+            
+            // 5地点の緯度・経度（山形, 寒河江, 月山, 鶴岡, 酒田）
+            const lats = "38.25,38.38,38.55,38.73,38.92";
+            const lons = "140.34,140.27,140.02,139.83,139.85";
+            const url = `https://api.open-meteo.com/v1/forecast?latitude=${lats}&longitude=${lons}&current_weather=true&timezone=Asia%2FTokyo`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+
+                const weatherMap = {0:"快晴", 1:"晴れ", 2:"時々曇り", 3:"曇り", 45:"霧", 51:"小雨", 61:"雨", 71:"雪", 95:"雷雨"};
+                const locations = ["山形市", "寒河江市", "月山", "鶴岡市", "酒田市"];
+                
+                let weatherText = "【沿線気象情報】 ";
+
+                for(let i = 0; i < 5; i++) {
+                    const temp = Math.round(data[i].current_weather.temperature);
+                    const code = data[i].current_weather.weathercode;
+                    const desc = weatherMap[code] || "不明";
+                    
+                    weatherText += `[${locations[i]}] ${desc} ${temp}℃ ｜ `;
+                }
+
+                marquee.innerText = weatherText + "　";
+
+            } catch (error) {
+                marquee.innerText = "【沿線気象情報】現在、気象データの取得に失敗しています。時間を置いて再度アクセスしてください。";
+            }
+        }
+
+        getUzenWeather();
+
+        setInterval(getUzenWeather, 3600000);
+
+        </script>
+
         <div class="container"> 
+
+            
             <h2 class="top">羽前急行の管理人ページへようこそ！</h2>
             
+            <div style="border: 2px dashed #ff0000; padding: 10px; background: #ffffcc; margin-bottom: 20px; text-align: center;">
+                <font color="#ff0000"><b>＝管理人からのお願い＝</b></font><br>
+                <font size="2" color="#000">二次創作作品を随時募集中です！詳細は当ページ下部の「二次創作・ファンアートについて」をご覧ください。</font>
+            </div>
+
             <div class="section-box">
                 <span class="section-title">羽前急行のリンク集</span><br>
                 ・公式風ホームページ：<a href="https://uzen-exp.jp">http://uzen-exp.jp</a><br>
@@ -176,6 +221,7 @@
         </footer>
     </main>
 
+    
     
 </body>
 </html>
