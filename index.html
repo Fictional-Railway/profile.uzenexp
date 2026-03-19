@@ -130,6 +130,11 @@
                 display: inline;
             }
         }
+
+        .list:hover {
+            background: none;
+            border-bottom: #000 solid 1px;
+        }
     </style>
 </head>
 <body>
@@ -137,6 +142,16 @@
         <header>
             <div class="header-title">管理人ページ</div>
         </header>
+        <nav style="display: flex; justify-content: center; background-color: #f0f0f0; padding: 10px 0; margin: 0;">
+                <ul style="display: flex; list-style: none; padding: 0; margin: 0; gap: 20px;">
+                <li><a class="list" href="./index.html" style="text-decoration: none; color: #333;">トップページ</a></li>
+                <li>|</li>
+                <li><a class="list" href="./blog.html" style="text-decoration: none; color: #333;">ブログ</a></li>
+                <li>|</li>
+                <li><a class="list" href="./gallery.html" style="text-decoration: none; color: #333;">写真集</a></li>
+            </nav>
+        
+            <br>
         
         <div class="marquee-container">
             <div id="weather-marquee" class="marquee-content">【沿線気象情報】気象データを取得中...</div>
@@ -195,6 +210,10 @@
 -->
 
             </div>
+
+            
+
+            
 
             <div class="section-box">
                 <span class="section-title">羽前急行のリンク集</span><br>
