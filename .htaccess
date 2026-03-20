@@ -1,0 +1,10 @@
+# .html を省略してアクセス可能にする設定
+RewriteEngine On
+
+# 実際のファイルが存在しない場合のみ処理
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+# .html を補完して表示
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L]
