@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>【架空鉄道】羽前急行 - 管理人ページ</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="./favicon.ico">
@@ -136,11 +135,6 @@
             }
         }
 
-        .list:hover {
-            background: none;
-            border-bottom: #000 solid 1px;
-        }
-
         .photo-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -162,12 +156,11 @@
         .photo-item img {
             width: 70%;
             height: auto;
-            display: block;
             object-fit: cover;
             aspect-ratio: 3 / 2;
             margin: 0 auto;
             border: #d8d8d8 solid 3px;
-            box-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+            margin: 0 auto;
         }
 
         @media (max-width: 768px) {
@@ -201,114 +194,22 @@
             background: none;
             border-bottom: #000 solid 1px;
         }
-
     </style>
 </head>
 <body>
     <main>
-        <header>
-            <div class="header-title">Photo Gallery</div>
-        </header>
-        <nav style="display: flex; justify-content: center; background-color: #f0f0f0; padding: 10px 0; margin: 0;">
-                <ul style="display: flex; list-style: none; padding: 0; margin: 0; gap: 20px;">
-                <li><a class="list" href="./index.html" style="text-decoration: none; color: #333;">トップページ</a></li>
-                <li>|</li>
-                <li><a class="list" href="./blog.html" style="text-decoration: none; color: #333;">ブログ</a></li>
-                <li>|</li>
-                <li><a class="list" href="./photo.html" style="text-decoration: none; color: #333;">写真集</a></li>
-            </nav>
         
             <br>
 
-            <div class="container"> 
-
-            <h2 class="top">撮影した写真集</h2>
-            <p>クリックして拡大できます。</p>
-
-            <div class="photo-grid">
-
-                <a href="./photo/1704.html" style="display: block; color: rgb(2, 22, 0); text-decoration: none;">
-                <div class="photo-item">
-                    <img src="img/IMG_1704.JPG" alt="作品4">
-                    <div class="photo-caption">2026.03.08 / 八ヶ岳 by 小淵沢駅</div>
-                </div>
-                </a>
-
-                <a href="./photo/1538.html" style="display: block; color: rgb(2, 22, 0); text-decoration: none;">
-                <div class="photo-item">
-                    <img src="img/IMG_1538.JPG" alt="作品4">
-                    <div class="photo-caption">2026.02.08 / 秩父鉄道荒川橋梁</div>
-                </div>
-                </a>
-
-                <a href="./photo/1329.html" style="display: block; color: rgb(2, 22, 0); text-decoration: none;">
-                <div class="photo-item">
-                    <img src="img/IMG_1329.JPG" alt="作品4">
-                    <div class="photo-caption">2026.01.04 / 甲府盆地と富士山</div>
-                </div>
-                </a>
-
-                <a href="./photo/1118.html" style="display: block; color: rgb(2, 22, 0); text-decoration: none;">
-                <div class="photo-item">
-                    <img src="img/IMG_1118.JPG" alt="作品4">
-                    <div class="photo-caption">2025.11.07 / 多摩湖の取水塔</div>
-                </div>
-                </a>
-
-                <a href="./photo/0474.html" style="display: block; color: rgb(2, 22, 0); text-decoration: none;">
-                <div class="photo-item">
-                    <img src="img/IMG_0474.JPG" alt="作品4">
+        <div class="container">
+                
+            <div class="photo-item">
+                    <img src="../img/IMG_0474.JPG" alt="作品4">
                     <div class="photo-caption">2025.10.05 / 湊川橋梁の夕焼け</div>
                 </div>
-                </a>
-
-                <a href="./photo/9820.html" style="display: block; color: rgb(2, 22, 0); text-decoration: none;">
-                <div class="photo-item">
-                    <img src="img/IMG_9820.JPG">
-                    <div class="photo-caption">2025.09.14 / 六郷橋と京急線</div>
-                </div>
-                </a>
-                
-                <a href="./photo/9000.html" style="display: block; color: rgb(2, 22, 0); text-decoration: none;">
-                <div class="photo-item">
-                    <img src="img/IMG_9000.JPG">
-                    <div class="photo-caption">2025.07.06 / 根府川駅とE231系</div>
-                </div>
-                </a>
-                
-            </div>
-
-            <p><a href="./index.html">トップページに戻る →</a></p>
+            <p><a href="../photo.html">写真集に戻る →</a></p>
             
         </div>
-
-        </div>
-
-        <footer>
-            
-            
-
-            <div style="font-size: 0.75rem; color: #666; margin-top: 20px;">
-                <span>&copy; 2025- Uzen-Express Railway (Nagi_san096) All Rights Reserved.</span><br>
-                <br>
-                <span>このサイトに登場する「羽前急行」は架空の鉄道会社であり、実際には存在しません。</span><br>
-                <b>最終更新: 2026/03/20</b>
-                <br>
-                <br>
-                <div>
-                    <span>リンク集</span><br><br>
-                    <a href="https://uzen-exp.jp">公式風ホームページ</a>　
-                    <a href="https://wiki.uzen-exp.jp">まとめサイト</a>　
-                    <a href="./index.html">管理人ページ</a>
-                    <br>
-                    <br>
-                    <a href="./blog.html">ブログ</a>　
-                    <a href="./photo.html">写真集</a>　
-                    <a href="./melody.html">乗降促進シミュレータ</a>　
-                    <a href="./ototetsu.html">VVVF二次元コード</a>　
-                </div>
-            </div>
-        </footer>
     </main>
 </body>
 </html>
