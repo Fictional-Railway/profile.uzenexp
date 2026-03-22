@@ -208,6 +208,7 @@
         <header>
             <div class="header-title">小ネタ</div>
         </header>
+
         <nav style="display: flex; justify-content: center; background-color: #f0f0f0; padding: 10px 0; margin: 0;">
                 <ul style="display: flex; list-style: none; padding: 0; margin: 0; gap: 20px;">
                 <li><a class="list" href="./index.html" style="text-decoration: none; color: #333;">トップページ</a></li>
@@ -215,11 +216,17 @@
                 <li><a class="list" href="./blog.html" style="text-decoration: none; color: #333;">ブログ</a></li>
                 <li>|</li>
                 <li><a class="list" href="./photo.html" style="text-decoration: none; color: #333;">写真集</a></li>
+        </nav>
+
+        <nav style="display: flex; justify-content: center; background-color: #f0f0f0; padding: 10px 0; margin: 0;">
+                <ul style="display: flex; list-style: none; padding: 0; margin: 0; gap: 20px;">
+                <li><a class="list" href="./index.html" style="text-decoration: none; color: #333;">小ネタ</a></li>
                 <li>|</li>
-                <li><a class="list" href="./photo.html" style="text-decoration: none; color: #333;">小ネタ</a></li>
-            </nav>
+                <li><a class="list" href="./index.html" style="text-decoration: none; color: #333;">その他</a></li>
+        </nav>
+
         
-            <br>
+        <br>
 
         <div class="container"> 
             <h2 class="top">小ネタ</h2>
@@ -261,5 +268,16 @@
             </div>
         </footer>
     </main>
+
+    <script>
+    const hamburger = document.getElementById('hamburger');
+    const navList = document.getElementById('nav-list');
+
+    hamburger.addEventListener('click', () => {
+        // 'active' クラスを付け外しすることで表示・非表示を切り替える
+        navList.classList.toggle('active');
+    });
+    </script>
+
 </body>
 </html>
