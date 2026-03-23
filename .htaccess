@@ -1,5 +1,6 @@
 # RewriteEngineを有効化
 RewriteEngine On
+
 # .html拡張子を省略してアクセス可能にする
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
