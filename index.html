@@ -72,7 +72,7 @@
         .marquee-content {
             display: inline-block;
             padding-left: 100%;
-            animation: marquee 15s linear infinite;
+            animation: marquee 12.5s linear infinite;
         }
 
         @keyframes marquee {
@@ -194,6 +194,16 @@
             font-weight: bold;
             line-height: 1.2;
         }
+
+        .a-section a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .a-section a:hover {
+            background-color: #fff;
+            border-bottom: #000 solid 1px;
+        }
     </style>
 </head>
 <body>
@@ -214,54 +224,12 @@
             <br>
         
         <div class="marquee-container">
-            <div id="weather-marquee" class="marquee-content">【沿線気象情報】気象データを取得中...</div>
+            <div class="marquee-content">【お知らせ】写真集ページを作成しました。今まで撮った写真で良いものはページに載せようと思います。</div>
         </div>
 
-        <script>
-        async function getUzenWeather() {
-            const marquee = document.getElementById('weather-marquee');
-            
-            // 5地点の緯度・経度（山形, 寒河江, 月山, 鶴岡, 酒田）
-            const lats = "38.25,38.38,38.55,38.73,38.92";
-            const lons = "140.34,140.27,140.02,139.83,139.85";
-            const url = `https://api.open-meteo.com/v1/forecast?latitude=${lats}&longitude=${lons}&current_weather=true&timezone=Asia%2FTokyo`;
-
-            try {
-                const response = await fetch(url);
-                const data = await response.json();
-
-                const weatherMap = {0:"快晴", 1:"晴れ", 2:"時々曇り", 3:"曇り", 45:"霧", 51:"小雨", 61:"雨", 71:"雪", 95:"雷雨"};
-                const locations = ["山形市", "寒河江市", "月山", "鶴岡市", "酒田市"];
-                
-                let weatherText = "【沿線気象情報】 ";
-
-                for(let i = 0; i < 5; i++) {
-                    const temp = Math.round(data[i].current_weather.temperature);
-                    const code = data[i].current_weather.weathercode;
-                    const desc = weatherMap[code] || "不明";
-                    
-                    weatherText += `[${locations[i]}] ${desc} ${temp}℃ ｜ `;
-                }
-
-                marquee.innerText = weatherText + "　";
-
-            } catch (error) {
-                marquee.innerText = "【沿線気象情報】気象データが取得できませんでした。JavaScriptをONにするか、インターネット環境の良いところで再度お試しください。";
-            }
-        }
-
-        getUzenWeather();
-
-        setInterval(getUzenWeather, 3600000);
-
-        </script>
-
+        
         <div class="container"> 
             <h2 class="top">羽前急行の管理人ページへようこそ！</h2>
-            
-            
-
-            </div>
 
             <div class="section-box">
                 <span class="section-title">今月の写真</span><br>
@@ -280,7 +248,8 @@
                 <span class="section-title">羽前急行のリンク集</span><br>
                 ・公式風ホームページ：<a href="https://uzen-exp.jp"><br class="mbonly-br">http://uzen-exp.jp</a><br>
                 ・まとめサイト：<a href="https://wiki.uzen-exp.jp"><br class="mbonly-br">http://wiki.uzen-exp.jp</a><br>
-                ・管理人ページ：<a href="https://group.uzen-exp.jp"><br class="mbonly-br">http://group.uzen-exp.jp</a>
+                ・管理人ページ：<a href="https://group.uzen-exp.jp"><br class="mbonly-br">http://group.uzen-exp.jp</a><br>
+                <span style="font-size: 0.75rem;">2026.03.25 </span><span style="color:#f18100;">☆暗号化強制</span>しました。
             </div>
 
             <div class="section-box">
@@ -288,14 +257,14 @@
                 どうもこんにちは。架空鉄道にはまってから約3年、一番本格的に制作しているのがこの羽前急行です。一応他のサイト運営もしていますがかなり世界線が違うので紹介しません。ブログもやってます。<a href="./blog.html">こちらからどうぞ。</a>
             </div>
 
-            <div class="section-box">
+            <div class="section-box a-section">
                 <span class="section-title">制作ツール</span><br>
-                <b>サイト作成：</b>Visual Studio Code<br>
-                <b>サーバー：</b>Github Pages<br>
-                <b>車両3Dモデル：</b>Blender<br>
-                <b>一部風景画像等：</b>写真AC<br>
-                <b>音源作成：</b>BandLab<br>
-                <b>駅名標：</b>Excel
+                <b>サイト作成：</b><a href="https://code.visualstudio.com/">Visual Studio Code</a><br>
+                <b>サーバー：</b><a href="https://docs.github.com/ja/pages">Github Pages</a><br>
+                <b>車両3Dモデル：</b><a href="https://www.blender.org/">Blender</a><br>
+                <b>一部風景画像等：</b><a href="https://www.photo-ac.com/">写真AC</a><br>
+                <b>音源作成：</b><a href="https://www.bandlab.com/">BandLab</a><br>
+                <b>駅名標：</b><a href="https://www.microsoft.com/ja-jp/microsoft-365/excel">Excel</a>
             </div>
 
             <div class="section-box">
@@ -328,7 +297,7 @@
 
             <div class="section-box">
                 <span class="section-title">お問い合わせ</span><br>
-                設定についての質問、直通運転の相談、新規サイトの作成、サイトの不具合(リンク切れ等)など、何でも気軽にご相談ください！<br>
+                設定についての質問、直通運転の相談、新規サイトの作成、サイトの不具合(リンク切れ等)など、何でも気軽にご相談ください！ブログ・写真集の感想もこちらにお願いします。<br>
                 <b>Mailto:</b> <a href="mailto:uzen.express@gmail.com">uzen.express@gmail.com</a>
                 
             </div>
