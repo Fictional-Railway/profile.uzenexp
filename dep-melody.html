@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>【架空鉄道】羽前急行 - 管理人ページ</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="./favicon.ico">
@@ -181,15 +182,50 @@
             margin-top: 10px;
             font-weight: bold;
             line-height: 1.2;
+            text-align: center;
         }
+
+        .oto {
+            display: block;
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .oto {
+                width: 100%;
+            }
+        }
+
+        .list:hover {
+            background: none;
+            border-bottom: #000 solid 1px;
+        }
+
+        .audio-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            background: #f0f0f0;
+            padding: 10px;
+            border: #aaa solid 1px;
+        }
+
+        .melo-blue {
+            background: #007acc;
+            padding: 2px;
+            border-radius: 50px;
+        }
+
     </style>
 </head>
 <body>
     <main>
         <header>
-            <div class="header-title">404 Not Found.</div>
+            <div class="header-title">自作発車<br class="mbonly-br">メロディ</div>
         </header>
-
+        
         <nav style="display: flex; justify-content: center; background-color: #f0f0f0; padding: 10px 0; margin: 0;">
                 <ul style="display: flex; list-style: none; padding: 0; margin: 0; gap: 20px;">
                 <li><a class="list" href="./index.html" style="text-decoration: none; color: #333; font-size: small;">トップ</a></li>
@@ -199,28 +235,28 @@
         </nav>
         
             <br>
-        
 
-        <div class="container"> 
-            <h2 class="top">エラー</h2>
+            <div class="container"> 
+
+            <h2 class="top">新都市メロディシリーズ</h2>
+            <div class="photo-grid">
+                <div class="audio-item">
+                    <audio controls style="width: 100%; height: 50px;" class="melo-blue">
+                        <source src="./shintoshi-melody/Midnight_Departure_(新都市1番).mp3" type="audio/mpeg">
+                        お使いのブラウザはaudioタグをサポートしていません。
+                    </audio>
+                    <p>新都市1番 - Midnight Departure</p>
+                </div>
+
+
+            </div>
+
+            <p><a href="./index.html">トップページに戻る →</a></p>
             
-            <!--
-            <div class="section-box">
-                <span class="section-title">今月の写真・動画</span><br>
-                下名川駅の発車メロディ
-                <video controls width="100%">
-<source src="./e49a6ebc-ee6b-4ed8-ae08-f607a844525b.mp4" type="video/mp4">
-このブラウザは動画再生に対応していません。
-</video>
--->
-
-            </div>
-
-            <div class="section-box">
-                お探しのページは移動されたか、削除された可能性があります。
-            </div>
+        </div>
 
         </div>
+
         <footer>
             
             
@@ -229,7 +265,7 @@
                 <span>&copy; 2025- Uzen-Express Railway (Nagi_san096) All Rights Reserved.</span><br>
                 <br>
                 <span>このサイトに登場する「羽前急行」は架空の鉄道会社であり、実際には存在しません。</span><br>
-                <b>最終更新: 2026/03/10</b>
+                <b>最終更新: 2026/03/20</b>
                 <br>
                 <br>
                 <div>
