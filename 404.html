@@ -1,240 +1,67 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>【架空鉄道】羽前急行 - 管理人ページ</title>
-    <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="./favicon.ico">
-    <link rel="icon" type="image/png" href="./favicon.ico">
-
-    <style>
-        body {
-            font-family: "MS PGothic", "ＭＳ Ｐゴシック", "MS P-Gothic", "Osaka", sans-serif; 
-            margin: 0;
-            padding: 10px;
-            background-color: #c0c0c0;
-            background-image: radial-gradient(#d0d0d0 1px, transparent 1px);
-            background-size: 8px 8px;
-            color: #000;
-        }
-
-        main {
-            background: #fff;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 4px outset #eee;
-        }
-
-        header {
-            background: url(https://uzen-exp.jp/image/%E6%9C%88%E5%B1%B116-9_20260210.png);
-            background-size: cover;
-            background-position: center;
-            padding: 60px 20px;
-            color: white;
-            text-shadow: 2px 2px 0px #000;
-            border: 3px inset #ccc;
-            margin-bottom: 20px;
-        }
-
-        .header-title {
-            text-align: center;
-            font-size: 2.2rem;
-            font-weight: bold;
-        }
-
-        .marquee-container {
-            background: #000;
-            color: #ff9900;
-            padding: 5px;
-            border: 2px inset #444;
-            font-weight: bold;
-            margin-bottom: 25px;
-            overflow: hidden;
-            white-space: nowrap;
-            box-sizing: border-box;
-        }
-
-        .marquee-content {
-            display: inline-block;
-            padding-left: 100%;
-            animation: marquee 15s linear infinite;
-        }
-
-        @keyframes marquee {
-            0%   { transform: translate(0, 0); }
-            100% { transform: translate(-100%, 0); }
-        }
-
-        h2.top {
-            background: linear-gradient(to right, #000080, #1084d0);
-            color: #fff;
-            padding: 4px 10px;
-            font-size: 1.1rem;
-            border: 1px solid #000;
-            margin-bottom: 15px;
-        }
-
-        .section-box {
-            border: 1px solid #808080;
-            padding: 12px;
-            margin-bottom: 20px;
-            background: #ffffff;
-            line-height: 1.8;
-        }
-
-        .section-title {
-            font-weight: bold;
-            color: #ff0050;
-            background: #fff;
-            padding: 0 5px;
-            margin-top: -22px;
-            display: inline-block;
-            border: 1px dashed #aeaeae;
-        }
-
-        a { font-weight: bold; }
-        a:link { color: #0000ff; }
-        a:visited { color: #800080; }
-        a:hover { color: #ff0000; background: #ffff00; }
-
-        footer {
-            margin-top: 40px;
-            border-top: 1px dashed #666;
-            padding-top: 20px;
-            text-align: center;
-        }
-
-        .hit-counter {
-            background: #000;
-            color: #fff;
-            padding: 5px 15px;
-            display: inline-block;
-            border: 2px solid #fff;
-            font-family: "Courier New", monospace;
-            margin-bottom: 10px;
-        }
-
-        .counter-images {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 2px;
-            margin: 5px 0;
-        }
-
-        .mbonly-br {
-            display: none;
-        }
-
-        @media (max-width: 400px) {
-            .mbonly-br {
-                display: inline;
-            }
-        }
-
-        .list:hover {
-            background: none;
-            border-bottom: #000 solid 1px;
-        }
-
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-bottom: 40px;
-        }
-
-        .photo-item {
-            border: 1px solid var(--line-light);
-            padding: 8px;
-            background: #ffffff;
-            transition: 0.2s;
-        }
-
-        .photo-item:hover {
-            border-color: var(--line-dark); 
-        }
-
-        .photo-item img {
-            width: 70%;
-            height: auto;
-            display: block;
-            object-fit: cover;
-            aspect-ratio: 3 / 2;
-            margin: 0 auto;
-            border: #d8d8d8 solid 3px;
-            box-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-        }
-
-        @media (max-width: 768px) {
-            .photo-item img {
-                width: 100%;
-            }
-        }
-
-        .photo-caption {
-            font-size: 0.7rem;
-            color: var(--sub-color);
-            margin-top: 10px;
-            font-weight: bold;
-            line-height: 1.2;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>★ Welcome to UZEN-EXP Group Official ★</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main>
-        <header>
-            <div class="header-title">404 Not Found.</div>
-        </header>
 
-        <nav style="display: flex; justify-content: center; background-color: #f0f0f0; padding: 10px 0; margin: 0;">
-                <ul style="display: flex; list-style: none; padding: 0; margin: 0; gap: 20px;">
-                <li><a class="list" href="./index.html" style="text-decoration: none; color: #333; font-size: small;">トップ</a></li>
-                <li><a class="list" href="./blog.html" style="text-decoration: none; color: #333; font-size: small;">ブログ</a></li>
-                <li><a class="list" href="./photo.html" style="text-decoration: none; color: #333; font-size: small;">写真集</a></li>
-                <li><a class="list" href="./hassya.html" style="text-decoration: none; color: #333; font-size: small;">自作発車メロディ</a></li>
-        </nav>
-        
-            <br>
-        
+<div class="site-wrapper">
+  <header class="header-container">
+    <div class="header-inner">
+      <h1>404 Not Found</h1>
+      <div id="greeting-marquee"></div>
+    </div>
+  </header>
 
-        <div class="container"> 
-            <h2 class="top">エラー</h2>
+  <div class="layout-container">
+    <main class="main-content">
 
-            <div class="section-box">
-                お探しのページは移動されたか、削除された可能性があります。
-            </div>
+      <section class="text-container full">
+        <h3>■ 404 Not Found</h3>
+        <p>
+            お探しのページが見つかりません。<br>
+        </p>
+      </section>
 
-        </div>
-        <footer>
-            
-            
-
-            <div style="font-size: 0.75rem; color: #666; margin-top: 20px;">
-                <span>&copy; 2025- Uzen-Express Railway (Nagi_san096) All Rights Reserved.</span><br>
-                <br>
-                <span>このサイトに登場する「羽前急行」は架空の鉄道会社であり、実際には存在しません。</span><br>
-                <b>最終更新: 2026/03/10</b>
-                <br>
-                <br>
-                <div>
-                    <span>リンク集</span><br><br>
-                    <a href="https://uzen-exp.jp">公式風ホームページ</a>　
-                    <a href="https://wiki.uzen-exp.jp">まとめサイト</a>　
-                    <a href="./index.html">管理人ページ</a>
-                    <br>
-                    <br>
-                    <a href="./blog.html">ブログ</a>　
-                    <a href="./photo.html">写真集</a>　
-                    <a href="./melody.html">乗降促進シミュレータ</a>　
-                    <a href="./ototetsu.html">VVVF二次元コード</a>　
-                    <a href="./hassya.html">自作発車メロディ</a>
-                </div>
-            </div>
-        </footer>
     </main>
+
+    <aside class="right-menu">
+      <div class="menu-outer-frame">
+        <div class="menu-title">NAVIGATION</div>
+        <div class="menu-scroll-box">
+          <ul class="retro-list">
+            <li class="category">MAIN</li>
+            <li><a href="./index.html">⇒ HOME</a></li>
+            <li><a href="./about.html">⇒ ABOUT US</a></li>
+            <li><a href="./blog.html">⇒ BLOG</a></li>
+            <li><a href="./photo.html">⇒ GALLERY</a></li>
+            <li><a href="./hassya.html">⇒ DEP.MELODY</a></li>
+            <li><a href="./omake.html">⇒ OMAKE</a></li>
+            <li><a href="./links.html">⇒ LINK</a></li>
+            <li><a href="./contact.html">⇒ CONTACT</a></li>
+          </ul>
+        </div>
+
+        <div class="counter-box" style="text-align: left;">
+          あなたは <nobr><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><a href="https://ctr.stylemap.co.jp/"><img src="https://www.f-counter.net/ani1/67/1773213803/" alt="無料アクセスカウンター" border="0" style="margin:0px; padding:0px; border:0px; vertical-align:bottom"></a></td>
+<td><a href="https://ctr.stylemap.co.jp/"><img src="http://www.f-counter.net/ani2/67/1773213803/" alt="無料アクセスカウンター" border="0" style="margin:0px; padding:0px; border:0px; vertical-align:bottom"></a></td></tr></tbody></table></nobr> 人目の訪問者です！<br>
+            <b style="font-size: 0.7rem;">2026.03.28 100人アクセス<br> (人''▽｀)ありがとう☆</b>
+        </div>
+
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer-container">
+    <div class="status-bar">
+        Last Update: 2026.04.09
+    </div>
+    <address>Copyright (C) Nagi_san096 All Rights Reserved.</address>
+  </footer>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
