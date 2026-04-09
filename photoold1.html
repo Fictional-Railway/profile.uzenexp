@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【架空鉄道】羽前急行 - 管理人ページ</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./favicon.ico">
+    <link rel="icon" type="image/png" href="./favicon.ico">
+
+    <style>
+        body {
+            font-family: "MS PGothic", "ＭＳ Ｐゴシック", "MS P-Gothic", "Osaka", sans-serif; 
+            margin: 0;
+            padding: 10px;
+            background-color: #c0c0c0;
+            background-image: radial-gradient(#d0d0d0 1px, transparent 1px);
+            background-size: 8px 8px;
+            color: #000;
+        }
+
+        main {
+            background: #fff;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 4px outset #eee;
+        }
+
+        header {
+            background: url(https://uzen-exp.jp/image/%E6%9C%88%E5%B1%B116-9_20260210.png);
+            background-size: cover;
+            background-position: center;
+            padding: 60px 20px;
+            color: white;
+            text-shadow: 2px 2px 0px #000;
+            border: 3px inset #ccc;
+            margin-bottom: 20px;
+        }
+
+        .header-title {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: bold;
+        }
+
+        .marquee-container {
+            background: #000;
+            color: #ff9900;
+            padding: 5px;
+            border: 2px inset #444;
+            font-weight: bold;
+            margin-bottom: 25px;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 15s linear infinite;
+        }
+
+        @keyframes marquee {
+            0%   { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
+        }
+
+        h2.top {
+            background: linear-gradient(to right, #000080, #1084d0);
+            color: #fff;
+            padding: 4px 10px;
+            font-size: 1.1rem;
+            border: 1px solid #000;
+            margin-bottom: 15px;
+        }
+
+        .section-box {
+            border: 1px solid #808080;
+            padding: 12px;
+            margin-bottom: 20px;
+            background: #ffffff;
+            line-height: 1.8;
+        }
+
+        .section-title {
+            font-weight: bold;
+            color: #ff0050;
+            background: #fff;
+            padding: 0 5px;
+            margin-top: -22px;
+            display: inline-block;
+            border: 1px dashed #aeaeae;
+        }
+
+        a { font-weight: bold; }
+        a:link { color: #0000ff; }
+        a:visited { color: #800080; }
+        a:hover { color: #ff0000; background: #ffff00; }
+
+        footer {
+            margin-top: 40px;
+            border-top: 1px dashed #666;
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .hit-counter {
+            background: #000;
+            color: #fff;
+            padding: 5px 15px;
+            display: inline-block;
+            border: 2px solid #fff;
+            font-family: "Courier New", monospace;
+            margin-bottom: 10px;
+        }
+
+        .counter-images {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2px;
+            margin: 5px 0;
+        }
+
+        .mbonly-br {
+            display: none;
+        }
+
+        @media (max-width: 400px) {
+            .mbonly-br {
+                display: inline;
+            }
+        }
+
+        .list:hover {
+            background: none;
+            border-bottom: #000 solid 1px;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .photo-item {
+            border: 1px solid var(--line-light);
+            padding: 8px;
+            background: #ffffff;
+            transition: 0.2s;
+        }
+
+        .photo-item2 {
+            border: 1px solid var(--line-light);
+            padding: 8px;
+            background: #ffffff;
+            transition: 0.2s;
+        }
+
+        .photo-item:hover {
+            border-color: var(--line-dark); 
+        }
+
+        .photo-item2:hover {
+            border-color: var(--line-dark); 
+        }
+
+        .photo-item img {
+            width: 70%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            aspect-ratio: 3 / 2;
+            margin: 0 auto;
+            border: #d8d8d8 solid 3px;
+        }
+
+        .photo-item2 img {
+            width: 50%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            aspect-ratio: 2 / 3;
+            margin: 0 auto;
+            border: #d8d8d8 solid 3px;
+        }
+
+        @media (max-width: 768px) {
+            .photo-item img {
+                width: 100%;
+            }
+        }
+
+        .photo-caption {
+            font-size: 0.7rem;
+            color: var(--sub-color);
+            margin-top: 10px;
+            font-weight: bold;
+            line-height: 1.2;
+            text-align: center;
+        }
+
+        .oto {
+            display: block;
+            width: 70%;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .oto {
+                width: 100%;
+            }
+        }
+
+        .list:hover {
+            background: none;
+            border-bottom: #000 solid 1px;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <div class="header-title">写真集</div>
+        </header>
+
+        <nav style="display: flex; justify-content: center; background-color: #f0f0f0; padding: 10px 0; margin: 0;">
+                <ul style="display: flex; list-style: none; padding: 0; margin: 0; gap: 20px;">
+                <li><a class="list" href="./index.html" style="text-decoration: none; color: #333; font-size: small;">トップ</a></li>
+                <li><a class="list" href="./blog.html" style="text-decoration: none; color: #333; font-size: small;">ブログ</a></li>
+                <li><a class="list" href="./photo.html" style="text-decoration: none; color: #333; font-size: small;">写真集</a></li>
+                <li><a class="list" href="./hassya.html" style="text-decoration: none; color: #333; font-size: small;">自作発車メロディ</a></li>
+        </nav>
+        
+            <br>
+
+            <div class="container"> 
+
+            <h2 class="top">撮影した写真集</h2>
+            <p>クリックして拡大できます。</p>
+
+            <div class="photo-grid">
+
+                <a href="./photo/1764.html" style="display: block; color: rgb(2, 22, 0); text-decoration: none;">
+                <div class="photo-item2">
+                    <img src="img/IMG_1764.JPG" alt="作品4">
+                    <div class="photo-caption">2026.04.04 / 上越新幹線の高架と上越線</div>
+                </div>
+                </a>
+
+                <a href="./photo/1777.html" style="display: block; color: rgb(2, 22, 0); text-decoration: none;">
+                <div class="photo-item">
+                    <img src="img/IMG_1777.JPG" alt="作品4">
+                    <div class="photo-caption">2026.04.04 / 六日町駅と越後湯沢の山々</div>
+                </div>
+                </a>
+
+                <a href="./photo/1771.html" style="display: block; color: rgb(2, 22, 0); text-decoration: none;">
+                <div class="photo-item">
+                    <img src="img/IMG_1771.JPG" alt="作品4">
+                    <div class="photo-caption">2026.04.04 / HK100形の側面</div>
+                </div>
+                </a>
+
+                <a href="./photo/1704.html" style="display: block; color: rgb(2, 22, 0); text-decoration: none;">
+                <div class="photo-item">
+                    <img src="img/IMG_1704.JPG" alt="作品4">
+                    <div class="photo-caption">2026.03.08 / 八ヶ岳 by 小淵沢駅</div>
+                </div>
+                </a>
+
+                <a href="./photo/1538.html" style="display: block; color: rgb(2, 22, 0); text-decoration: none;">
+                <div class="photo-item">
+                    <img src="img/IMG_1538.JPG" alt="作品4">
+                    <div class="photo-caption">2026.02.08 / 秩父鉄道荒川橋梁</div>
+                </div>
+                </a>
+
+                <a href="./photo/1301.html" style="display: block; color: rgb(2, 22, 0); text-decoration: none;">
+                <div class="photo-item2">
+                    <img src="img/IMG_1301.JPG" alt="作品4">
+                    <div class="photo-caption">2026.01.04 / 甲府城の謝恩碑</div>
+                </div>
+                </a>
+
+                <a href="./photo/1329.html" style="display: block; color: rgb(2, 22, 0); text-decoration: none;">
+                <div class="photo-item">
+                    <img src="img/IMG_1329.JPG" alt="作品4">
+                    <div class="photo-caption">2026.01.04 / 甲府盆地と富士山</div>
+                </div>
+                </a>
+
+                <a href="./photo/1118.html" style="display: block; color: rgb(2, 22, 0); text-decoration: none;">
+                <div class="photo-item">
+                    <img src="img/IMG_1118.JPG" alt="作品4">
+                    <div class="photo-caption">2025.11.07 / 多摩湖の取水塔</div>
+                </div>
+                </a>
+
+                <a href="./photo/0474.html" style="display: block; color: rgb(2, 22, 0); text-decoration: none;">
+                <div class="photo-item">
+                    <img src="img/IMG_0474.JPG" alt="作品4">
+                    <div class="photo-caption">2025.10.05 / 湊川橋梁の夕焼け</div>
+                </div>
+                </a>
+
+                <a href="./photo/9820.html" style="display: block; color: rgb(2, 22, 0); text-decoration: none;">
+                <div class="photo-item">
+                    <img src="img/IMG_9820.JPG">
+                    <div class="photo-caption">2025.09.14 / 六郷橋と京急線</div>
+                </div>
+                </a>
+                
+                <a href="./photo/9000.html" style="display: block; color: rgb(2, 22, 0); text-decoration: none;">
+                <div class="photo-item">
+                    <img src="img/IMG_9000.JPG">
+                    <div class="photo-caption">2025.07.06 / 根府川駅とE231系</div>
+                </div>
+                </a>
+                
+            </div>
+
+            <p><a href="./index.html">トップページに戻る →</a></p>
+            
+        </div>
+
+        </div>
+
+        <footer>
+            
+            
+
+            <div style="font-size: 0.75rem; color: #666; margin-top: 20px;">
+                <span>&copy; 2025- Uzen-Express Railway (Nagi_san096) All Rights Reserved.</span><br>
+                <br>
+                <span>このサイトに登場する「羽前急行」は架空の鉄道会社であり、実際には存在しません。</span><br>
+                <b>最終更新: 2026/03/20</b>
+                <br>
+                <br>
+                <div>
+                    <span>リンク集</span><br><br>
+                    <a href="https://uzen-exp.jp">公式風ホームページ</a>　
+                    <a href="https://wiki.uzen-exp.jp">まとめサイト</a>　
+                    <a href="./index.html">管理人ページ</a>
+                    <br>
+                    <br>
+                    <a href="./blog.html">ブログ</a>　
+                    <a href="./photo.html">写真集</a>　
+                    <a href="./melody.html">乗降促進シミュレータ</a>　
+                    <a href="./ototetsu.html">VVVF二次元コード</a>　
+                    <a href="./hassya.html">自作発車メロディ</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>
