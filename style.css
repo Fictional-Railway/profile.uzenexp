@@ -1,0 +1,172 @@
+/* 基本設定 */
+body {
+  background-color: #f0f0f0; /* 背景は少しグレーにしてコンテンツを白で浮かす */
+  font-family: "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 10px;
+}
+
+.site-wrapper {
+  width: 900px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 3px double #999; /* 二重線 */
+  padding: 15px;
+  box-shadow: 5px 5px 0px #cccccc; /* 影をつけて立体的に */
+}
+
+/* ヘッダー */
+.header-container {
+  border: 1px solid #666;
+  padding: 10px;
+  margin-bottom: 15px;
+  background-color: #f9f9f9;
+}
+
+.header-inner {
+  border: 1px dashed #999;
+  padding: 10px;
+  text-align: center;
+}
+
+h1 { margin: 0; font-size: 24px; color: #000; }
+.sub-title { margin: 5px 0; font-size: 11px; color: #666; }
+
+/* レイアウト */
+.layout-container { display: flex; gap: 15px; }
+.main-content { flex: 1; }
+
+/* コンテナ共通 */
+.text-container, .image-container {
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+  background-color: #fff;
+}
+
+.text-container h3 {
+  background-color: #666666;
+  color: #fff;
+  margin: 0;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+.text-container p { padding: 10px; margin: 0; }
+
+/* 2カラム用 */
+.flex-content { display: flex; gap: 10px; }
+.half { flex: 1; }
+
+/* スクロールリスト */
+.scroll-list {
+  height: 80px;
+  overflow-y: scroll;
+  padding: 5px;
+  border: 2px inset #eee;
+  margin: 10px;
+  font-size: 11px;
+}
+.scroll-list ul { list-style: none; padding: 0; margin: 0; }
+.scroll-list span { color: #888; margin-right: 5px; }
+
+/* バナーエリア */
+.banner-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  padding: 10px;
+}
+.dummy-banner {
+  height: 40px;
+  background-color: #ddd;
+  border: 1px solid #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #fff;
+  font-size: 10px;
+}
+.blue { background-color: #6699cc; }
+.green { background-color: #66cc99; }
+.red { background-color: #cc6666; }
+
+/* 右メニュー */
+.right-menu { width: 220px; }
+.menu-outer-frame {
+  border: 2px solid #666;
+  padding: 2px;
+}
+.menu-title {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  font-weight: bold;
+}
+.menu-scroll-box {
+  height: 350px;
+  overflow-y: scroll;
+  border: 2px inset #eee;
+  padding: 5px;
+}
+.category {
+  background-color: #eee;
+  font-weight: bold;
+  padding: 3px;
+  margin: 5px 0;
+  border-left: 3px solid #666;
+}
+.retro-list { list-style: none; padding: 0; margin: 0; }
+.retro-list a {
+  display: block;
+  padding: 4px;
+  color: #0000ee;
+  text-decoration: none;
+  border-bottom: 1px dotted #ccc;
+}
+.retro-list a:hover { color: #ff0000; background: #ffffcc; }
+
+.counter-box {
+  margin-top: 10px;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #ccc;
+  font-size: 11px;
+}
+.counter-box span { font-weight: bold; color: red; }
+
+/* フッター */
+.footer-container {
+  margin-top: 20px;
+  border-top: 1px solid #333;
+}
+.status-bar {
+  background-color: #eee;
+  padding: 3px 10px;
+  font-size: 10px;
+  border: 1px solid #ccc;
+}
+address {
+  text-align: center;
+  font-style: normal;
+  padding: 10px;
+  font-size: 10px;
+}
+.img-wrapper img {
+  max-width: 60%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: 15px;
+  border: #999 5px solid;
+  box-shadow: #333 5px 5px 0px;
+}
+.img-caption {
+    text-align: center; 
+}
+.seisaku {
+    margin-left: 20px;
+}
