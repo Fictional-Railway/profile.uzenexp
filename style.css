@@ -170,3 +170,76 @@ address {
 .seisaku {
     margin-left: 20px;
 }
+/* プロフィール全体のレイアウト */
+.profile-layout {
+  display: flex;
+  gap: 15px;
+  padding: 10px;
+}
+
+/* プロフィール画像部分 */
+.profile-img {
+  width: 140px;
+  flex-shrink: 0;
+  border: 1px solid #999;
+  background-color: #eee;
+  padding: 5px;
+  text-align: center;
+}
+
+.profile-img img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #666;
+  margin-bottom: 5px;
+}
+
+/* 表形式の設定 */
+.profile-table-wrapper {
+  flex-grow: 1;
+  border: none !important; /* 親の枠がある場合は消す */
+  padding: 0 !important;
+}
+
+.retro-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.retro-table th, .retro-table td {
+  padding: 8px;
+  border-bottom: 1px dotted #ccc; /* 2000年代定番のドット線 */
+  text-align: left;
+}
+
+.retro-table th {
+  width: 100px;
+  background-color: #f0f0f0;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Q&Aセクション */
+.qa-scroll-box {
+  height: 150px;
+  overflow-y: scroll;
+  background-color: #fff;
+  border: 2px inset #eee;
+  margin: 10px;
+  padding: 10px;
+}
+
+.retro-qa dt {
+  font-weight: bold;
+  color: #000080; /* 濃い青 */
+  margin-top: 10px;
+  border-left: 3px solid #000080;
+  padding-left: 5px;
+}
+
+.retro-qa dd {
+  margin: 5px 0 15px 15px;
+  color: #333;
+  line-height: 1.4;
+}
