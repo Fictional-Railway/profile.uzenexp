@@ -357,3 +357,18 @@ address {
   margin-left: 20px;
   margin-top: 5px;
 }
+
+.melo-blue {
+  margin: 0 auto;
+  padding: 5px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+audio {
+  display: block;
+  margin: 0 auto;
+}
