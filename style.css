@@ -197,7 +197,7 @@ address {
 /* 表形式の設定 */
 .profile-table-wrapper {
   flex-grow: 1;
-  border: none !important; /* 親の枠がある場合は消す */
+  border: none !important;
   padding: 0 !important;
 }
 
@@ -209,7 +209,7 @@ address {
 
 .retro-table th, .retro-table td {
   padding: 8px;
-  border-bottom: 1px dotted #ccc; /* 2000年代定番のドット線 */
+  border-bottom: 1px dotted #ccc;
   text-align: left;
 }
 
@@ -220,7 +220,6 @@ address {
   font-weight: bold;
 }
 
-/* Q&Aセクション */
 .qa-scroll-box {
   height: 150px;
   overflow-y: scroll;
@@ -232,7 +231,7 @@ address {
 
 .retro-qa dt {
   font-weight: bold;
-  color: #000080; /* 濃い青 */
+  color: #000080; 
   margin-top: 10px;
   border-left: 3px solid #000080;
   padding-left: 5px;
@@ -244,7 +243,6 @@ address {
   line-height: 1.4;
 }
 
-/* ギャラリー全体の紹介文 */
 .gallery-intro {
   font-size: 11px;
   color: #666;
@@ -252,7 +250,6 @@ address {
   border-bottom: 1px dotted #ccc;
 }
 
-/* カテゴリ選択部分 */
 .gallery-category-tag {
   background-color: #f9f9f9;
   padding: 5px;
@@ -261,15 +258,13 @@ address {
   color: #333;
 }
 
-/* 画像を並べるグリッド */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2列並び */
+  grid-template-columns: repeat(2, 1fr);
   gap: 15px;
   padding: 15px;
 }
 
-/* 写真1枚ずつの枠 */
 .gallery-item {
   display: flex;
   border: 1px solid #ccc;
@@ -278,11 +273,10 @@ address {
   box-shadow: 2px 2px 0px #eee;
 }
 
-/* 写真の「額縁」部分 */
 .photo-frame {
   width: 100px;
   height: 100px;
-  border: 2px outset #eee; /* 立体的な枠 */
+  border: 2px outset #eee;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -296,7 +290,6 @@ address {
   max-height: 90px;
 }
 
-/* 写真の情報テキスト */
 .photo-info {
   flex-grow: 1;
 }
@@ -322,7 +315,6 @@ address {
   color: #333;
 }
 
-/* ページネーション */
 .pagination {
   text-align: center;
   padding: 15px;
@@ -332,7 +324,6 @@ address {
 
 .pagination .current { font-weight: bold; color: red; }
 
-/* --- 拡大表示用のCSS --- */
 .photo-viewer-hidden { display: none; }
 #photo-viewer {
   position: fixed;
@@ -372,3 +363,4 @@ audio {
   display: block;
   margin: 0 auto;
 }
+
