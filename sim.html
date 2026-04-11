@@ -20,7 +20,6 @@
             font-family: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
         }
 
-        /* --- 表示機本体 --- */
         .led-board {
             position: relative;
             width: var(--display-width);
@@ -40,25 +39,16 @@
             width: 100%;
             height: 100%;
         }
-
-        /* 個別にアニメーションさせるためIDを分ける */
-        .type-img { width: 300px; height: 300px; object-fit: cover; transition: opacity 0.15s; }
-        .dest-img { width: 500px; height: 300px; object-fit: cover; transition: opacity 0.15s; }
-
-        /* --- LEDドットフィルター --- */
         .led-overlay {
             position: absolute;
             top: 0; left: 0;
             width: 100%; height: 100%;
             pointer-events: none;
-            /* ドットの網目表現 */
             background-image: radial-gradient(rgba(0,0,0,0.7) 45%, transparent 45%);
             background-size: var(--led-dot-size) var(--led-dot-size);
-            /* ガラスの反射っぽいうっすらとしたグラデーション */
             background-color: rgba(0, 0, 0, 0.05);
         }
 
-        /* --- 操作パネル --- */
         .panel {
             margin-top: 40px;
             display: flex;
@@ -139,20 +129,18 @@
     </div>
 
     <script>
-        // 種別だけ更新
         function updateType(path) {
             const el = document.getElementById('display-type');
-            el.style.opacity = 0; // 切り替え時の瞬き
+            el.style.opacity = 0; 
             setTimeout(() => {
                 el.src = path;
                 el.style.opacity = 1;
             }, 100);
         }
 
-        // 行先だけ更新
         function updateDest(path) {
             const el = document.getElementById('display-dest');
-            el.style.opacity = 0; // 切り替え時の瞬き
+            el.style.opacity = 0; 
             setTimeout(() => {
                 el.src = path;
                 el.style.opacity = 1;
