@@ -1,6 +1,5 @@
-/* 基本設定 */
 body {
-  background-color: #f0f0f0; /* 背景は少しグレーにしてコンテンツを白で浮かす */
+  background-color: #f0f0f0; 
   font-family: "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-size: 12px;
   line-height: 1.5;
@@ -12,12 +11,11 @@ body {
   width: 900px;
   margin: 0 auto;
   background-color: #ffffff;
-  border: 3px double #999; /* 二重線 */
+  border: 3px double #999;
   padding: 15px;
-  box-shadow: 5px 5px 0px #cccccc; /* 影をつけて立体的に */
+  box-shadow: 5px 5px 0px #cccccc; 
 }
 
-/* ヘッダー */
 .header-container {
   border: 1px solid #666;
   padding: 10px;
@@ -34,11 +32,9 @@ body {
 h1 { margin: 0; font-size: 24px; color: #000; }
 .sub-title { margin: 5px 0; font-size: 11px; color: #666; }
 
-/* レイアウト */
 .layout-container { display: flex; gap: 15px; }
 .main-content { flex: 1; }
 
-/* コンテナ共通 */
 .text-container, .image-container {
   border: 1px solid #ccc;
   margin-bottom: 15px;
@@ -55,11 +51,9 @@ h1 { margin: 0; font-size: 24px; color: #000; }
 
 .text-container p { padding: 10px; margin: 0; }
 
-/* 2カラム用 */
 .flex-content { display: flex; gap: 10px; }
 .half { flex: 1; }
 
-/* スクロールリスト */
 .scroll-list {
   height: 80px;
   overflow-y: scroll;
@@ -71,7 +65,6 @@ h1 { margin: 0; font-size: 24px; color: #000; }
 .scroll-list ul { list-style: none; padding: 0; margin: 0; }
 .scroll-list span { color: #888; margin-right: 5px; }
 
-/* バナーエリア */
 .banner-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -93,7 +86,6 @@ h1 { margin: 0; font-size: 24px; color: #000; }
 .green { background-color: #66cc99; }
 .red { background-color: #cc6666; }
 
-/* 右メニュー */
 .right-menu { width: 220px; }
 .menu-outer-frame {
   border: 2px solid #666;
@@ -138,7 +130,6 @@ h1 { margin: 0; font-size: 24px; color: #000; }
 }
 .counter-box span { font-weight: bold; color: red; }
 
-/* フッター */
 .footer-container {
   margin-top: 20px;
   border-top: 1px solid #333;
@@ -170,14 +161,12 @@ address {
 .seisaku {
     margin-left: 20px;
 }
-/* プロフィール全体のレイアウト */
 .profile-layout {
   display: flex;
   gap: 15px;
   padding: 10px;
 }
 
-/* プロフィール画像部分 */
 .profile-img {
   width: 140px;
   flex-shrink: 0;
@@ -194,7 +183,6 @@ address {
   margin-bottom: 5px;
 }
 
-/* 表形式の設定 */
 .profile-table-wrapper {
   flex-grow: 1;
   border: none !important;
