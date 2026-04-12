@@ -8,8 +8,9 @@ body {
 }
 
 .site-wrapper {
-  width: 900px;
+  max-width: 900px;
   margin: 0 auto;
+  box-sizing: border-box;
   background-color: #ffffff;
   border: 3px double #999;
   padding: 15px;
@@ -352,3 +353,39 @@ audio {
   margin: 0 auto;
 }
 
+/* =========================================
+   スマホ用表示設定
+   ========================================= */
+@media screen and (max-width: 768px) {
+  .layout-container {
+    flex-direction: column;
+  }
+
+  .right-menu {
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .flex-content {
+    flex-direction: column;
+  }
+
+  .img-wrapper img {
+    max-width: 90%;
+  }
+
+  .banner-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  body {
+    font-size: 14px; 
+  }
+  .text-container h3 {
+    font-size: 14px;
+  }
+  .scroll-list {
+    font-size: 13px;
+    height: 120px;
+  }
+}
