@@ -1,236 +1,131 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
   <title>★ 管理人ページへようこそ ★</title>
-  <style type="text/css">
-    /* 3DS/レトロブラウザ向け最適化CSS */
-    body {
-      background-color: #e6e6e6; /* 少しグレーがかったレトロな背景色 */
-      color: #333333;
-      font-family: "MS PGothic", "Osaka", sans-serif;
-      margin: 10px 0;
-      line-height: 1.4;
-    }
-    a { color: #0000ff; text-decoration: underline; }
-    a:hover { color: #ff0000; text-decoration: none; }
-    
-    /* 外枠のテーブル */
-    .outer-table {
-      background-color: #ffffff;
-      border: 3px double #999999;
-    }
-    
-    /* ヘッダーエリア */
-    .header-style {
-      background-color: #cccccc;
-      color: #000080;
-      padding: 10px;
-      border-bottom: 1px solid #000000;
-    }
-    
-    /* 各セクションのボックス */
-    .content-box {
-      border: 1px solid #999999;
-      background-color: #ffffff;
-      margin-bottom: 10px;
-    }
-    .box-title {
-      background-color: #f0f0f0;
-      border-bottom: 1px solid #999999;
-      padding: 3px 8px;
-      font-weight: bold;
-      color: #000080;
-      font-size: 14px;
-    }
-    .box-body {
-      padding: 10px;
-      font-size: 14px;
-    }
-    
-    /* お知らせのスクロールエリア */
-    .scroll-list {
-      height: 120px;
-      overflow-y: scroll;
-      background-color: #ffffff;
-      border: 1px inset #cccccc;
-      padding: 5px;
-      font-size: 12px;
-    }
-    
-    /* サイドバーのメニュー */
-    .nav-menu {
-      border: 1px solid #000080;
-      background-color: #ffffff;
-    }
-    .nav-title {
-      background-color: #000080;
-      color: #ffffff;
-      padding: 3px;
-      text-align: center;
-      font-weight: bold;
-      font-size: 12px;
-    }
-    .retro-list {
-      list-style-type: none;
-      padding: 5px;
-      margin: 0;
-      font-size: 13px;
-    }
-    .retro-list li {
-      margin-bottom: 3px;
-      border-bottom: 1px dotted #cccccc;
-    }
-    
-    /* フッター */
-    .footer-area {
-      border-top: 1px solid #999999;
-      padding: 10px;
-      background-color: #f9f9f9;
-      font-size: 12px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body bgcolor="#e6e6e6" text="#333333" link="#0000ff" vlink="#800080">
+<body>
 
-<div align="center">
-  <table width="95%" border="0" cellpadding="0" cellspacing="0" class="outer-table">
-    <tr>
-      <td>
-        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="header-style">
-          <tr>
-            <td align="center">
-              <h1 style="margin:5px; font-size:20px;">管理人ページ</h1>
-              <marquee scrolldelay="100" style="background:#ffffff; color:#000080; font-size:12px; border:1px solid #000000;">
-                いらっしゃいませ！Nagi_san096のホームページへようこそ！ゆっくりしていってね！
-              </marquee>
-            </td>
-          </tr>
-        </table>
+<div class="site-wrapper">
+  <header class="header-container">
+    <div class="header-inner">
+      <h1>管理人ページ</h1>
+      <div id="greeting-marquee"></div>
+    </div>
+  </header>
 
-        <table width="100%" border="0" cellpadding="10" cellspacing="0">
-          <tr valign="top">
-            <td>
-              
-              <div align="center">
-                <a href="./photo.html">
-                  <img src="./img/IMG_1777.JPG" alt="Main Visual" border="1" style="max-width:100%; border-color:#000000;">
-                </a>
-                <div style="font-size:12px; margin-top:5px;">最近の写真 - 2026.04.04 六日町駅と湯沢の山々</div>
-              </div>
-              <br>
+  <div class="layout-container">
+    <main class="main-content">
+      
+      <section class="image-container">
+        <a href="./photo.html">
+        <div class="img-wrapper">
+          <img src="./img/IMG_1777.JPG" alt="Main Visual">
+        </div>
+        </a>
+        <p class="img-caption">最近の写真 - 2026.04.04 六日町駅と湯沢の山々</p>
+      </section>
 
-              <table width="100%" border="0" cellpadding="0" cellspacing="0" class="content-box">
-                <tr><td class="box-title">■ ご案内</td></tr>
-                <tr><td class="box-body">
-                  <b>現在ホームページリニューアル中です。</b><br>
-                  旧トップページは<a href="./indexold1.html">こちら</a>からご覧いただけます。
-                </td></tr>
-              </table>
+      <section class="text-container full">
+        <h3>■ ご案内</h3>
+        <p>
+          <b>現在ホームページリニューアル中です。</b>旧トップページは<a href="./indexold1.html">こちら</a>からご覧いただけます。<br>
+        </p>
+      </section>
 
-              <table width="100%" border="0" cellpadding="0" cellspacing="0" class="content-box">
-                <tr><td class="box-title">■ お知らせ</td></tr>
-                <tr><td class="box-body">
-                  <div class="scroll-list">
-                    <ul style="margin:0; padding-left:20px;">
-                      <li><span>2026/04/12</span> またサイトのデザインを変えました。</b></li>
-                      <li><span>2026/04/12</span> レスポンシブデザインに対応しました。</b></li>
-                      <li><span>2026/04/11</span> 全主要ページのデザインを更新。</li>
-                      <li><span>2026/04/09</span> 新デザイン先行公開！順次変更していきます。</li>
-                      <li><span>2026/03/26</span> <a href="./hassya.html">自作発車メロディページ</a>追加。</li>
-                      <li><span>2026/03/21</span> <a href="./photo.html">写真集</a>を追加しました。</li>
-                      <li><span>2026/03/15</span> おまけページを追加。</li>
-                      <li><span>2026/03/14</span> <a href="./blog.html">ブログページ</a>を新設。</li>
-                      <li><span>2026/03/11</span> サイトのHTTPS化が完了しました。</li>
-                      <li><span>2026/02/15</span> 羽前急行コンテンツを公開しました。</li>
-                    </ul>
-                  </div>
-                </td></tr>
-              </table>
+      <div class="flex-content">
+        <section class="text-container half">
+          <h3>■ お知らせ</h3>
+          <div class="scroll-list">
+            <ul>
+              <li><span>2026/04/12</span> レスポンシブデザインに対応しました。<b>ページナビはページ一番下にあります。</b></li>
+              <li><span>2026/04/11</span> 全ての主要ページのデザインを更新しました。</li>
+              <li><span>2026/04/09</span> こちらが更新したページデザインです！随時こちらのデザインに変更していきます。</li>
+              <li><span>2026/03/26</span> <a href="./hassya.html">自作発車メロディページ</a>を追加しました。</li>
+              <li><span>2026/03/21</span> <a href="./photo.html">写真集</a>を追加しました。</li>
+              <li><span>2026/03/15</span> おまけページを追加しました。</li>
+              <li><span>2026/03/14</span> <a href="./blog.html">ブログページ</a>を新設いたしました。</li>
+              <li><span>2026/03/11</span> サイトのHTTPS化が完了しました。</li>
+              <li><span>2026/02/15</span> 羽前急行コンテンツに関するサイトを公開しました。</li>
+            </ul>
+          </div>
+        </section>
+        
+      </div>
 
-              <table width="100%" border="0" cellpadding="0" cellspacing="0" class="content-box">
-                <tr><td class="box-title">■ MESSAGE FROM ADMIN</td></tr>
-                <tr><td class="box-body">
-                  当サイトへお越しいただきありがとうございます。Nagi_san096です。低スぺノートPCの限界に挑戦中。メモリ不足は気合でカバーしてます。ご意見や感想などもお気軽にいただけると嬉しいです！ブログもやってます。<a href="./blog.html">こちらからどうぞ。</a>
-                </td></tr>
-              </table>
+      <section class="text-container full">
+        <h3>■ MESSAGE FROM ADMIN</h3>
+        <p>
+          当サイトへお越しいただきありがとうございます。Nagi_san096です。低スぺノートPCの限界に挑戦中。メモリ不足は気合でカバーしてます。ご意見や感想などもお気軽にいただけると嬉しいです！ブログもやってます。<a href="./blog.html">こちらからどうぞ。</a>
+        </p>
+      </section>
 
-              <table width="100%" border="0" cellpadding="0" cellspacing="0" class="content-box">
-                <tr><td class="box-title">■ 二次創作・ファンアートについて</td></tr>
-                <tr><td class="box-body">
-                  ぜひ「#羽前急行」をつけて投稿してください。管理人が泣いて喜びます。ジャンルは問いません。投稿の際は、当サイトの名称やURLを記載していただけると助かります。
-                </td></tr>
-              </table>
+      <section class="text-container full">
+        <h3>■ 二次創作・ファンアートについて</h3>
+        <p>
+          ぜひ「#羽前急行」などのハッシュタグをつけて投稿してください。管理人が泣いて喜びます。イラスト、3Dモデル、ドット絵、走行音の再現など、ジャンルは問いません。投稿の際は、当サイトの名称やURLをどこかに記載していただけると助かります。
+        </p>
+      </section>
 
-              <table width="100%" border="0" cellpadding="0" cellspacing="0" class="content-box">
-                <tr><td class="box-title">■ 制作協力</td></tr>
-                <tr><td class="box-body">
-                  ・ 𝙺𝚒𝚌𝚑𝚒𝚢𝚊<br>
-                  ・ harutandayo yaho
-                </td></tr>
-              </table>
+      <section class="text-container full">
+        <h3>■ 制作協力</h3>
+        <p>
+          <li class="seisaku">𝙺𝚒𝚌𝚑𝚒𝚢𝚊</li>
+          <li class="seisaku">harutandayo yaho</li>
+        </p>
+      </section>
 
-            </td>
+      <!-- リンク集 
+      <section class="text-container banner-box">
+        <h3>■ リンク集</h3>
+        <div class="banner-grid">
+          <div class="dummy-banner">BANNER</div>
+          <div class="dummy-banner blue">BANNER</div>
+          <div class="dummy-banner green">BANNER</div>
+          <div class="dummy-banner red">BANNER</div>
+        </div>
+      </section>
+      -->
+    </main>
 
-            <td width="200">
-              <table width="100%" border="0" cellpadding="0" cellspacing="0" class="nav-menu">
-                <tr><td class="nav-title">NAVIGATION</td></tr>
-                <tr>
-                  <td>
-                    <ul class="retro-list">
-                      <li style="background:#f0f0f0;"><b>MAIN</b></li>
-                      <li><a href="./index.html">⇒ HOME</a></li>
-                      <li><a href="./about.html">⇒ ABOUT US</a></li>
-                      <li><a href="./blog.html">⇒ BLOG</a></li>
-                      <li><a href="./photo.html">⇒ GALLERY</a></li>
-                      <li><a href="./hassya.html">⇒ DEP.MELODY</a></li>
-                      <li><a href="./omake.html">⇒ OMAKE</a></li>
-                      <li><a href="./link.html">⇒ LINK</a></li>
-                      <li><a href="./contact.html">⇒ CONTACT</a></li>
-                    </ul>
-                  </td>
-                </tr>
-              </table>
-              
-              <br>
+    <aside class="right-menu">
+      <div class="menu-outer-frame">
+        <div class="menu-title">NAVIGATION</div>
+        <div class="menu-scroll-box">
+          <ul class="retro-list">
+            <li class="category">MAIN</li>
+            <li><a href="./index.html">⇒ HOME</a></li>
+            <li><a href="./about.html">⇒ ABOUT US</a></li>
+            <li><a href="./blog.html">⇒ BLOG</a></li>
+            <li><a href="./photo.html">⇒ GALLERY</a></li>
+            <li><a href="./hassya.html">⇒ DEP.MELODY</a></li>
+            <li><a href="./omake.html">⇒ OMAKE</a></li>
+            <li><a href="./link.html">⇒ LINK</a></li>
+            <li><a href="./contact.html">⇒ CONTACT</a></li>
+          </ul>
+        </div>
 
-              <table width="100%" border="0" cellpadding="5" cellspacing="0" style="border:1px dashed #999999; font-size:12px;">
-                <tr>
-                  <td align="center">
-                    あなたは<br>
-                    <table border="0" cellspacing="0" cellpadding="0">
-                      <tr>
-                        <td><a href="https://ctr.stylemap.co.jp/"><img src="https://www.f-counter.net/ani1/67/1773213803/" alt="無料アクセスカウンター" border="0" style="vertical-align:bottom"></a></td>
-                        <td><a href="https://ctr.stylemap.co.jp/"><img src="http://www.f-counter.net/ani2/67/1773213803/" alt="無料アクセスカウンター" border="0" style="vertical-align:bottom"></a></td>
-                      </tr>
-                    </table>
-                    人目の訪問者です！<br>
-                    <font color="#ff0000"><b>2026.03.28 100人アクセス<br> (人''▽｀)ありがとう☆</b></font>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-        </table>
+        <div class="counter-box" style="text-align: left;">
+          あなたは <nobr><table border="0" cellspacing="0" cellpadding="0"><tbody><tr><td><a href="https://ctr.stylemap.co.jp/"><img src="https://www.f-counter.net/ani1/67/1773213803/" alt="無料アクセスカウンター" border="0" style="margin:0px; padding:0px; border:0px; vertical-align:bottom"></a></td>
+<td><a href="https://ctr.stylemap.co.jp/"><img src="http://www.f-counter.net/ani2/67/1773213803/" alt="無料アクセスカウンター" border="0" style="margin:0px; padding:0px; border:0px; vertical-align:bottom"></a></td></tr></tbody></table></nobr> 人目の訪問者です！<br>
+            <b style="font-size: 0.7rem;">2026.03.28 100人アクセス<br> (人''▽｀)ありがとう☆</b>
+        </div>
 
-        <table width="100%" border="0" cellpadding="0" cellspacing="0" class="footer-area">
-          <tr>
-            <td align="center">
-              Last Update: 2026.04.13<br><br>
-              <address style="font-style:normal;">
-                このサイトに登場する「羽前急行」は<b>架空の鉄道会社</b>であり、実際には存在しません。<br>
-                Copyright (C) Nagi_san096 All Rights Reserved.
-              </address>
-            </td>
-          </tr>
-        </table>
+      </div>
+    </aside>
+  </div>
 
-      </td>
-    </tr>
-  </table>
+  <footer class="footer-container">
+    <div class="status-bar">
+        Last Update: 2026.04.13
+    </div>
+    <address>このサイトに登場する「羽前急行」は架空の鉄道会社であり、実際には存在しません。</address>
+    <address>Copyright (C) Nagi_san096 All Rights Reserved.</address>
+  </footer>
 </div>
 
-<script type="text/javascript" src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
