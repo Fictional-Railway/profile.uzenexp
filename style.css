@@ -353,9 +353,7 @@ audio {
   margin: 0 auto;
 }
 
-/* =========================================
-   スマホ用表示設定
-   ========================================= */
+/*レスポンシブ*/
 @media screen and (max-width: 768px) {
   .layout-container {
     flex-direction: column;

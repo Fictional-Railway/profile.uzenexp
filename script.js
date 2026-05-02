@@ -16,3 +16,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     viewer.style.display = 'none';
 });
+
+// Javascriptは書くのが面倒すぎるのでAIに書いてもらいました。ありがとうAI！
