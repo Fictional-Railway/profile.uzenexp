@@ -1,3 +1,9 @@
 {
     "livePreview.defaultPreviewPath": "/omake.html"
 }
+
+"emmet.includeLanguages": {
+  "django-html": "html",
+  "twig": "html",
+  "php": "html"
+}
